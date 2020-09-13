@@ -22,7 +22,7 @@ Pod::Spec.new do |spec|
   spec.author             = { "Maedi Laziman" => "maedilaziman@gmail.com" }
   spec.platform     = :ios, "11.6"
   spec.source       = { :git => "https://github.com/maedilaziman/innosoft-mdcalendar.git", :tag => "#{spec.version}" }
-  spec.source_files  = "MDSoftCalendar"
+  spec.source_files = 'MDSoftCalendar'
   
 
 end
