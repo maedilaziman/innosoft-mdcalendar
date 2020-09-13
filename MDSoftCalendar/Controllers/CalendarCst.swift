@@ -31,15 +31,13 @@ extension CalendarCst: DropDownYears_Interface{
         let strLbl = arrUpYear[indexPos]
         customCell.labelTitle.text = strLbl
         customCell.labelTitle.tag = indexPos
-        arrDataDropDownYears.append(strLbl)
-        
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTapCellDropDown))
         customCell.labelTitle.isUserInteractionEnabled = true
         customCell.labelTitle.addGestureRecognizer(tap)
     }
     
     func numberOfRowsYears(makeDropDownIdentifier: String) -> Int {
-        return totalCellDropDownYears
+        return totalCellDropDownYears+1
     }
     
     func selectItemInDropDownYears(indexPos: Int, makeDropDownIdentifier: String) {
@@ -109,7 +107,6 @@ public class CalendarCst: UIViewController, UIScrollViewDelegate {
     var dropDownRowHeight: CGFloat = 30
     var isShowDropDown: Bool!
     var totalCellDropDownYears = 70
-    var arrDataDropDownYears: [String]!
     
     var slides:[MDClndSlide] = [];
     
@@ -145,7 +142,11 @@ public class CalendarCst: UIViewController, UIScrollViewDelegate {
         pageControl.currentPage = 0
         view.bringSubviewToFront(pageControl)
         self.scrollView.contentSize.height = 1.0 // disable vertical scroll
-        
+        let frmMonthColl = monthCollection.frame
+        let hgmonthColl = frmMonthColl.height
+        let xmonthColl = frmMonthColl.origin.x
+        let ymonthColl = frmMonthColl.origin.y
+        monthCollection.frame = CGRect(x:xmonthColl, y:ymonthColl, width: CGFloat(Width_Window), height: hgmonthColl)
         monthCollection.delegateAct(layout: collMonthFlowLayout)
         let posYHeaderYear = parentViewHeaderYears.frame.origin.y
         let hgHeaderYear = parentViewHeaderYears.frame.height
@@ -175,13 +176,12 @@ public class CalendarCst: UIViewController, UIScrollViewDelegate {
         currentYear = Date().getCurrentYearNumber()
         lblYearsHeader.text = String(currentYear)
         arrUpYear = []
-        for i in 0 ..< totalCellDropDownYears {
+        for i in 0 ..< (totalCellDropDownYears+1) {
            let x = totalCellDropDownYears - i
             let theYear = currentYear - x
             arrUpYear.append("\(theYear)")
         }
         isShowDropDown = false
-        arrDataDropDownYears = []
         let tapLblYears = UITapGestureRecognizer(target: self, action: #selector(handleTapLblYears))
         lblYearsHeader.isUserInteractionEnabled = true
         lblYearsHeader.addGestureRecognizer(tapLblYears)
@@ -485,12 +485,13 @@ public class CalendarCst: UIViewController, UIScrollViewDelegate {
     }
     
     @objc func handleTapLblYears(sender: UITapGestureRecognizer){
-        isShowDropDown = dropDown.showDropDown(heightdd: dropDownRowHeight * CGFloat(totalCellDropDownYears))
+        let h = hgFrCal+50
+        isShowDropDown = dropDown.showDropDown(heightdd: h)
         let frmLblYears = self.lblYearsHeader.frame
         let posYActualDropDown = frmLblYears.height + 85
         let wdDropDownYears = frmLblYears.width
         let posXDropDownYears = frmLblYears.origin.x
-        dropDown.frame = CGRect(x: posXDropDownYears, y: posYActualDropDown, width: CGFloat(wdDropDownYears), height: dropDownRowHeight * CGFloat(totalCellDropDownYears))
+        dropDown.frame = CGRect(x: posXDropDownYears, y: posYActualDropDown, width: CGFloat(wdDropDownYears), height: h)
     }
     
     @objc func handleTapCellDropDown(sender: UITapGestureRecognizer) {
@@ -499,7 +500,7 @@ public class CalendarCst: UIViewController, UIScrollViewDelegate {
             let tag = lbl.tag
             isShowDropDown = false
             dropDown.hideDropDown()
-            let dt = arrDataDropDownYears[tag]
+            let dt = arrUpYear[tag]
             lblYearsHeader.text = dt
             numFnResultYears = Int(dt)
         }

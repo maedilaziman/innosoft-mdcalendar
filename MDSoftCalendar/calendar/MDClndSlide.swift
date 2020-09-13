@@ -41,7 +41,6 @@ class MDClndSlide: UIView {
     // An empty implementation adversely affects performance during animation.
     override func draw(_ rect: CGRect) {
         // Drawing code
-        print("MDClndSlide start draw")
         setViewWidthAndHeight()
         setNeedsDisplay()
     }

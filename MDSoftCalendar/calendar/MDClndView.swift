@@ -94,7 +94,21 @@ class MDClndView: UIView, UICollectionViewDelegate, UICollectionViewDataSource {
         layer.shadowRadius = 4.0
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
-        layout.itemSize = CGSize(width: 40, height: 40)
+        var wdWindow = methodHelper.getWidthWindow()
+        var w = 35
+        if wdWindow > 375 && wdWindow < 768{
+            w = 40
+        }
+        else if wdWindow >= 768 && wdWindow < 834 {
+            w = 90
+        }
+        else if wdWindow >= 834 && wdWindow < 1024 {
+            w = 100
+        }
+        else if wdWindow >= 1024 {
+            w = 120
+        }
+        layout.itemSize = CGSize(width: w, height: w)
         collViewClnd = UICollectionView(frame: self.frame, collectionViewLayout: layout)
         collViewClnd.backgroundColor = UIColor.white
         self.addSubview(collViewClnd)
