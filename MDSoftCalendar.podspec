@@ -20,9 +20,10 @@ Pod::Spec.new do |spec|
     limitations under the License.' }
 
   spec.author             = { "Maedi Laziman" => "maedilaziman@gmail.com" }
+spec.swift_versions = "5.0"
   spec.platform     = :ios, "11.6"
   spec.source       = { :git => "https://github.com/maedilaziman/innosoft-mdcalendar.git", :tag => "#{spec.version}" }
-  spec.source_files = 'MDSoftCalendar'
+  spec.source_files = 'MDSoftCalendar/**/*.swift'
   
 
 end
