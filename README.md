@@ -3,6 +3,7 @@ innosoft-mdcalendar aims to help produce an easily usable implementation of crea
 <br/>
 <br/>
 <img src="/Screenshots/screen1.png" width="300" />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><img src="/Screenshots/screen2.png" width="300" />
 </br>
 <br/>
 <h2>Requirements</h2>
