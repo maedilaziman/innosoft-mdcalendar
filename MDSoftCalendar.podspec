@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "MDSoftCalendar"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   spec.summary      = "Easy clear Calendar."
   spec.description  = "aims to help produce an easily usable implementation of create beauty calendar."
   spec.homepage     = "https://github.com/maedilaziman/innosoft-mdcalendar"
