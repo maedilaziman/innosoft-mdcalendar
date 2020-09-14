@@ -24,7 +24,8 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/maedilaziman/innosoft-mdcalendar.git", :tag => "#{spec.version}" }
   spec.swift_version = "5.1"
   spec.ios.deployment_target = '11.6'
-  spec.source_files = "MDSoftCalendar/**/*.{swift,h,xib}"
+  spec.source_files = "MDSoftCalendar/**/*.{lproj,storyboard,xcdatamodeld,xib,swift,h,m}"
+spec.resources = "MDSoftCalendar/Assets.xcassets/**/*"
   
 
 end
