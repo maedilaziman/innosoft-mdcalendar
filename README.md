@@ -2,8 +2,8 @@
 innosoft-mdcalendar aims to help produce an easily usable implementation of create beauty calendar.<br/>
 <br/>
 <br/>
-<img src="https://media.githubusercontent.com/media/maedilaziman/innosoft-mdcalendar/master/Screenshots/screen1.png" width="300" />
-<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><img src="https://media.githubusercontent.com/media/maedilaziman/innosoft-mdcalendar/master/Screenshots/screen2.png" width="300" />
+<img src="https://raw.githubusercontent.com/maedilaziman/innosoft-mdcalendar/master/Screenshots/screen1.png" width="300" />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><img src="https://raw.githubusercontent.com/maedilaziman/innosoft-mdcalendar/master/Screenshots/screen2.png" width="300" />
 </br>
 <br/>
 <h2>Requirements</h2>
