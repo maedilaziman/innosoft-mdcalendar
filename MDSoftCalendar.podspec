@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "MDSoftCalendar"
-  spec.version      = "1.0.2"
+  spec.version      = "1.0.3"
   spec.summary      = "Easy clear Calendar."
   spec.description  = "aims to help produce an easily usable implementation of create beauty calendar."
   spec.homepage     = "https://github.com/maedilaziman/innosoft-mdcalendar"
@@ -25,7 +25,7 @@ Pod::Spec.new do |spec|
   spec.swift_version = "5.1"
   spec.ios.deployment_target = '11.6'
   spec.source_files = "MDSoftCalendar/**/*.{lproj,storyboard,xcdatamodeld,xib,swift,h,m,xcassets}"
-spec.resources = "MDSoftCalendar/Assets.xcassets/**/*"
+spec.resources = "MDSoftCalendar/**/*.jpg"
   
 
 end
