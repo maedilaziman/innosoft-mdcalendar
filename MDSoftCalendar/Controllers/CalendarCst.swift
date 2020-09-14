@@ -77,7 +77,7 @@ struct RuntimeError: Error {
     }
 }
 
-let fmBundle = Bundle(identifier: "com.abc.md.MDSoftCalendar")
+//let fmBundle = Bundle(identifier: "com.abc.md.MDSoftCalendar")
 
 public class CalendarCst: UIViewController, UIScrollViewDelegate {
     
@@ -222,6 +222,7 @@ public class CalendarCst: UIViewController, UIScrollViewDelegate {
     }
     
     public func showMDSoftCalendar(comm: UIViewController, background: UIColor, backgroundWithSemiTransparent: Bool, closeCalendarWhenItemChoosed: Bool) {
+        let fmBundle = Bundle(for: type(of: self))
         let popvc = UIStoryboard(name: "Board_Calendar", bundle: fmBundle).instantiateViewController(withIdentifier: "CalendarCst_ID") as! CalendarCst
         popvc.modalPresentationStyle = .overCurrentContext
         popvc.modalTransitionStyle = .crossDissolve
@@ -329,12 +330,13 @@ public class CalendarCst: UIViewController, UIScrollViewDelegate {
     }
     
     func createSlides() -> [MDClndSlide] {
+        let fmBundle = Bundle(for: type(of: self))
         let strCurDate = Date().shortDate
         let splitsCurDate = strCurDate.components(separatedBy: "/")
         let chCurDate = splitsCurDate[1]
         let nibSlide = "MDClndSlide"
         let strFnDate  = methodHelper.removeZeroInFront(v: chCurDate)
-        let slide1:MDClndSlide = fmBundle!.loadNibNamed(nibSlide, owner: self, options: nil)?.first as! MDClndSlide
+        let slide1:MDClndSlide = fmBundle.loadNibNamed(nibSlide, owner: self, options: nil)?.first as! MDClndSlide
         let fview = slide1.viewClnd
         let frView = fview!.frame
         hgFrCal = frView.height
@@ -343,57 +345,57 @@ public class CalendarCst: UIViewController, UIScrollViewDelegate {
         setDelegateSlide(nmOfDay: nameOfDay, srFnDate: strFnDate)
         
         nameOfDay = getNameOfDay(numOfMonth: 2)
-        let slide2:MDClndSlide = fmBundle!.loadNibNamed(nibSlide, owner: self, options: nil)?.first as! MDClndSlide
+        let slide2:MDClndSlide = fmBundle.loadNibNamed(nibSlide, owner: self, options: nil)?.first as! MDClndSlide
         slide2.setListener(clndCst: self)
         setDelegateSlide(nmOfDay: nameOfDay, srFnDate: strFnDate)
         
         nameOfDay = getNameOfDay(numOfMonth: 3)
-        let slide3:MDClndSlide = fmBundle!.loadNibNamed(nibSlide, owner: self, options: nil)?.first as! MDClndSlide
+        let slide3:MDClndSlide = fmBundle.loadNibNamed(nibSlide, owner: self, options: nil)?.first as! MDClndSlide
         slide3.setListener(clndCst: self)
         setDelegateSlide(nmOfDay: nameOfDay, srFnDate: strFnDate)
         
         nameOfDay = getNameOfDay(numOfMonth: 4)
-        let slide4:MDClndSlide = fmBundle!.loadNibNamed(nibSlide, owner: self, options: nil)?.first as! MDClndSlide
+        let slide4:MDClndSlide = fmBundle.loadNibNamed(nibSlide, owner: self, options: nil)?.first as! MDClndSlide
         slide4.setListener(clndCst: self)
         setDelegateSlide(nmOfDay: nameOfDay, srFnDate: strFnDate)
         
         nameOfDay = getNameOfDay(numOfMonth: 5)
-        let slide5:MDClndSlide = fmBundle!.loadNibNamed(nibSlide, owner: self, options: nil)?.first as! MDClndSlide
+        let slide5:MDClndSlide = fmBundle.loadNibNamed(nibSlide, owner: self, options: nil)?.first as! MDClndSlide
         slide5.setListener(clndCst: self)
         setDelegateSlide(nmOfDay: nameOfDay, srFnDate: strFnDate)
         
         nameOfDay = getNameOfDay(numOfMonth: 6)
-        let slide6:MDClndSlide = fmBundle!.loadNibNamed(nibSlide, owner: self, options: nil)?.first as! MDClndSlide
+        let slide6:MDClndSlide = fmBundle.loadNibNamed(nibSlide, owner: self, options: nil)?.first as! MDClndSlide
         slide6.setListener(clndCst: self)
         setDelegateSlide(nmOfDay: nameOfDay, srFnDate: strFnDate)
         
         nameOfDay = getNameOfDay(numOfMonth: 7)
-        let slide7:MDClndSlide = fmBundle!.loadNibNamed(nibSlide, owner: self, options: nil)?.first as! MDClndSlide
+        let slide7:MDClndSlide = fmBundle.loadNibNamed(nibSlide, owner: self, options: nil)?.first as! MDClndSlide
         slide7.setListener(clndCst: self)
         setDelegateSlide(nmOfDay: nameOfDay, srFnDate: strFnDate)
         
         nameOfDay = getNameOfDay(numOfMonth: 8)
-        let slide8:MDClndSlide = fmBundle!.loadNibNamed(nibSlide, owner: self, options: nil)?.first as! MDClndSlide
+        let slide8:MDClndSlide = fmBundle.loadNibNamed(nibSlide, owner: self, options: nil)?.first as! MDClndSlide
         slide8.setListener(clndCst: self)
         setDelegateSlide(nmOfDay: nameOfDay, srFnDate: strFnDate)
         
         nameOfDay = getNameOfDay(numOfMonth: 9)
-        let slide9:MDClndSlide = fmBundle!.loadNibNamed(nibSlide, owner: self, options: nil)?.first as! MDClndSlide
+        let slide9:MDClndSlide = fmBundle.loadNibNamed(nibSlide, owner: self, options: nil)?.first as! MDClndSlide
         slide9.setListener(clndCst: self)
         setDelegateSlide(nmOfDay: nameOfDay, srFnDate: strFnDate)
         
         nameOfDay = getNameOfDay(numOfMonth: 10)
-        let slide10:MDClndSlide = fmBundle!.loadNibNamed(nibSlide, owner: self, options: nil)?.first as! MDClndSlide
+        let slide10:MDClndSlide = fmBundle.loadNibNamed(nibSlide, owner: self, options: nil)?.first as! MDClndSlide
         slide10.setListener(clndCst: self)
         setDelegateSlide(nmOfDay: nameOfDay, srFnDate: strFnDate)
         
         nameOfDay = getNameOfDay(numOfMonth: 11)
-        let slide11:MDClndSlide = fmBundle!.loadNibNamed(nibSlide, owner: self, options: nil)?.first as! MDClndSlide
+        let slide11:MDClndSlide = fmBundle.loadNibNamed(nibSlide, owner: self, options: nil)?.first as! MDClndSlide
         slide11.setListener(clndCst: self)
         setDelegateSlide(nmOfDay: nameOfDay, srFnDate: strFnDate)
         
         nameOfDay = getNameOfDay(numOfMonth: 12)
-        let slide12:MDClndSlide = fmBundle!.loadNibNamed(nibSlide, owner: self, options: nil)?.first as! MDClndSlide
+        let slide12:MDClndSlide = fmBundle.loadNibNamed(nibSlide, owner: self, options: nil)?.first as! MDClndSlide
         slide12.setListener(clndCst: self)
         setDelegateSlide(nmOfDay: nameOfDay, srFnDate: strFnDate)
             
@@ -474,6 +476,7 @@ public class CalendarCst: UIViewController, UIScrollViewDelegate {
     }
     
     func setUpDropDown(){
+        let fmBundle = Bundle(for: type(of: self))
         dropDown.makeDropDownIdentifier = "DROP_DOWN_NEW"
         dropDown.cellReusableIdentifier = "dropDownCell"
         dropDown.makeDropDownDataSourceProtocol = self

@@ -90,6 +90,7 @@ class MDClndView: UIView, UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func createView(){
+        let fmBundle = Bundle(for: type(of: self))
         backgroundColor = UIColor(white: 1, alpha: 0.0)
         layer.shadowRadius = 4.0
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
