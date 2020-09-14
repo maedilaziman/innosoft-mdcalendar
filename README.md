@@ -2,8 +2,8 @@
 innosoft-mdcalendar aims to help produce an easily usable implementation of create beauty calendar.<br/>
 <br/>
 <br/>
-<img src="/Screenshots/screen1.png" width="300" />
-<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><img src="/Screenshots/screen2.png" width="300" />
+<img src="https://raw.githubusercontent.com/maedilaziman/innosoft-mdcalendar/master/Screenshots/screen1.png" width="300" />
+<span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><img src="https://raw.githubusercontent.com/maedilaziman/innosoft-mdcalendar/master/Screenshots/screen2.png" width="300" />
 </br>
 <br/>
 <h2>Requirements</h2>
@@ -14,7 +14,10 @@ innosoft-mdcalendar aims to help produce an easily usable implementation of crea
 </ul>
 <h2>Installation</h2>
 <h4>CocoaPods</h4>
-<pre><span class="pl-en">pod 'MDSoftCalendar'</span></pre>
+<pre>
+<span class="pl-en">pod 'MDSoftCalendar', '~> 1.0'</span>&nbsp;or
+<p><span class="pl-en">pod 'MDSoftCalendar', :git => 'https://github.com/maedilaziman/innosoft-mdcalendar.git'</span></p>
+</pre>
 <h4>Manual</h4>
 Just the files from the <b>MDSoftCalendar</b> subfolder to your project.
 <br/>
