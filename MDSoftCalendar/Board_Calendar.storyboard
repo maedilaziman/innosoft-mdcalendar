@@ -63,7 +63,6 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ry4-EK-vdI">
                                         <rect key="frame" x="0.0" y="0.0" width="46" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="image.jpg"/>
                                         <connections>
                                             <action selector="actPreviousMonth:" destination="f7j-JT-JHX" eventType="touchUpInside" id="gnQ-2P-Zy0"/>
                                         </connections>
@@ -71,7 +70,6 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4T8-Yi-HgU">
                                         <rect key="frame" x="367" y="0.0" width="46" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="image.jpg"/>
                                         <connections>
                                             <action selector="actNextMonth:" destination="f7j-JT-JHX" eventType="touchUpInside" id="WSW-m1-kBP"/>
                                         </connections>
@@ -155,6 +153,5 @@
     </scenes>
     <resources>
         <image name="arrow.left" catalog="system" width="128" height="98"/>
-        <image name="image.jpg" width="22" height="22"/>
     </resources>
 </document>
