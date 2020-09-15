@@ -15,7 +15,8 @@ innosoft-mdcalendar aims to help produce an easily usable implementation of crea
 <h2>Installation</h2>
 <h4>CocoaPods</h4>
 <pre>
-<span class="pl-en">pod 'MDSoftCalendar', '~> 1.0'</span>&nbsp;or
+<span class="pl-en">pod 'MDSoftCalendar', '~> 1.0'</span>
+or if above not run properly please use this
 <p><span class="pl-en">pod 'MDSoftCalendar', :git => 'https://github.com/maedilaziman/innosoft-mdcalendar.git'</span></p>
 </pre>
 <h4>Manual</h4>
