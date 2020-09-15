@@ -161,7 +161,7 @@ public class CalendarCst: UIViewController, UIScrollViewDelegate {
         let posYHeaderMonth = parentViewHeaderMonth.frame.origin.y
         let hgHeaderMonth = parentViewHeaderMonth.frame.height
         parentViewHeaderMonth.frame = CGRect(x:0, y:posYHeaderMonth, width: CGFloat(Width_Window), height: hgHeaderMonth)
-        let image = UIImage(named: "image.jpg", in: Bundle(for: type(of: self)), compatibleWith: nil)
+        let image = UIImage(named: "ic_expand_right.jpg", in: Bundle(for: type(of: self)), compatibleWith: nil)
         btnNextMonth.setImage(image, for: .normal)
         btnPreviousMonth.setImage(image, for: .normal)
         let bnextMonth = btnNextMonth.imageView
